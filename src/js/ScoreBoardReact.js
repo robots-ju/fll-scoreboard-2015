@@ -81,7 +81,7 @@ var ScoreBoardReact = React.createClass({
 					React.createElement('label', {}, [
 						'Methanes collected ',
 						React.createElement('em', {}, '+40'),
-						React.createElement('input', {type: 'number', min: 0, valueLink: this.linkState('m02_methanes_collected')})
+						React.createElement('input', {type: 'number', min: 0, max: 2, valueLink: this.linkState('m02_methanes_collected')})
 					])
 				]),
 				React.createElement('div', {className: 'mission mission03'}, [
@@ -102,12 +102,12 @@ var ScoreBoardReact = React.createClass({
 					React.createElement('label', {}, [
 						'Yellow bars in correct bin ',
 							React.createElement('em', {}, '+6/+7'),
-						React.createElement('input', {type: 'number', min: 0, valueLink: this.linkState('m04_yellow_bars_in_correct_bin')})
+						React.createElement('input', {type: 'number', min: 0, max: 9, valueLink: this.linkState('m04_yellow_bars_in_correct_bin')})
 					]),
 					React.createElement('label', {}, [
 						'Blue bars in correct bin ',
 							React.createElement('em', {}, '+6/+7'),
-						React.createElement('input', {type: 'number', min: 0, valueLink: this.linkState('m04_blue_bars_in_correct_bin')})
+						React.createElement('input', {type: 'number', min: 0, max:6, valueLink: this.linkState('m04_blue_bars_in_correct_bin')})
 					])
 				]),
 				React.createElement('div', {className: 'mission mission04-black'}, [
@@ -115,17 +115,17 @@ var ScoreBoardReact = React.createClass({
 					React.createElement('label', {}, [
 						'Black bars in flower box or setup position ',
 							React.createElement('em', {}, '+8'),
-						React.createElement('input', {type: 'number', min: 0, valueLink: this.linkState('m04_black_bars_in_flower_box_or_setup_position')})
+						React.createElement('input', {type: 'number', min: 0, max: 8, valueLink: this.linkState('m04_black_bars_in_flower_box_or_setup_position')})
 					]),
 					React.createElement('label', {}, [
 						'Black bars in matching bin ',
 							React.createElement('em', {}, '+3'),
-						React.createElement('input', {type: 'number', min: 0, valueLink: this.linkState('m04_black_bars_in_matching_bin')})
+						React.createElement('input', {type: 'number', min: 0, max: 8, valueLink: this.linkState('m04_black_bars_in_matching_bin')})
 					]),
 					React.createElement('label', {}, [
 						'Black bars anywhere else ',
 							React.createElement('em', {}, '-8'),
-						React.createElement('input', {type: 'number', min: 0, valueLink: this.linkState('m04_black_bars_anywhere_else')})
+						React.createElement('input', {type: 'number', min: 0, max: 8, valueLink: this.linkState('m04_black_bars_anywhere_else')})
 					])
 				]),
 				React.createElement('div', {className: 'mission mission05'}, [
@@ -172,12 +172,12 @@ var ScoreBoardReact = React.createClass({
 					React.createElement('label', {}, [
 						'Bags in safety ',
 						React.createElement('em', {}, '+30'),
-						React.createElement('input', {type: 'number', min: 0, valueLink: this.linkState('m07_bags_in_safety')})
+						React.createElement('input', {type: 'number', min: 0, max: 2, valueLink: this.linkState('m07_bags_in_safety')})
 					]),
 					React.createElement('label', {}, [
 						'Animals in circle ',
 						React.createElement('em', {}, '+20'),
-						React.createElement('input', {type: 'number', min: 0, valueLink: this.linkState('m07_animals_in_circle')})
+						React.createElement('input', {type: 'number', min: 0, max: 3, valueLink: this.linkState('m07_animals_in_circle')})
 					]),
 					React.createElement('label', {className: (this.state.m07_chicken_in_circle ? ' active' : '')}, [
 						React.createElement('input', {type: 'checkbox', checkedLink: this.linkState('m07_chicken_in_circle')}),
@@ -238,7 +238,7 @@ var ScoreBoardReact = React.createClass({
 					React.createElement('label', {}, [
 						'Planes in safety ',
 						React.createElement('em', {}, '+40'),
-						React.createElement('input', {type: 'number', min: 0, valueLink: this.linkState('m11_planes_in_safety')})
+						React.createElement('input', {type: 'number', min: 0, max: 2, valueLink: this.linkState('m11_planes_in_safety')})
 					])
 				]),
 				React.createElement('div', {className: 'mission mission12'}, [
