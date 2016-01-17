@@ -1,0 +1,12 @@
+{
+  "name": "fll-scoreboard-2015",
+  "authors": [
+    "Clark Winkelmann <clark.winkelmann@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://robots-ju.ch",
+  "dependencies": {
+    "fll-robotgame-scorer-2015": "https://github.com/robots-ju/fll-robotgame-scorer-2015.git",
+    "react": "~0.13.3"
+  }
+}

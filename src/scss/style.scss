@@ -1,0 +1,190 @@
+/**
+ * FLL 2015 Scoreboard
+ * @author Clark Winkelmann <clark.winkelmann@gmail.com>
+ * @license MIT
+ */
+
+$color-background: white;
+$color-box-background: rgba(#efefef, 0.9);
+$color-box-border: #f78b1f;
+$color-box-shadow: rgba(black, 0.6);
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	min-height: 100%;
+}
+
+body {
+	color: #333;
+	font-family: Arial, sans-serif;
+	background-color: $color-background;
+	background-image: url(trashtrek-field.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+
+.enable_javascript {
+	display: block;
+	padding: 2em;
+	background: #f78b1f;
+	text-align: center;
+	font-weight: bold;
+}
+
+input {
+	font-size: 1em;
+}
+
+input[type=number],
+select {
+	width: 100%;
+}
+
+header {
+	position: absolute;
+	top: 1.6%;
+	left: 0;
+	right: 0;
+	font-size: 3em;
+	text-align: center;
+	line-height: 1.5em;
+
+	h1 {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0;
+		padding: 0;
+		font-size: 1em;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			vertical-align: bottom;
+			background-image: url(trashtrek-logo.jpg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 2em;
+			height: 1.3em;
+		}
+
+		em {
+			color: #999;
+			font-size: inherit;
+			font-style: normal;
+		}
+	}
+
+	.score {
+		display: inline-block;
+		vertical-align: middle;
+		min-width: 6.5em; // prevent the line width from changing when score rise
+		color: #f78b1f;
+		font-weight: bold;
+		text-align: center;
+	}
+}
+
+.missions {
+	font-size: 0.9em;
+}
+
+.mission {
+	position: absolute;
+	width: 18%;
+	margin-left: -9%;
+	min-height: 8em;
+	margin-top: -5em;
+	padding: 10px;
+	background: $color-box-background;
+	box-shadow: 1px 1px 2px $color-box-shadow;
+	border: 2px solid $color-box-border;
+
+	h2 {
+		margin: 0;
+		margin-bottom: 0.2em;
+		padding: 0.2em 0;
+		border-bottom: 2px solid #ccc;
+		font-size: 1em;
+		line-height: 1em;
+	}
+
+	label {
+		display: block;
+		padding: 0.1em;
+		font-size: 0.9em;
+		line-height: 1.1em;
+
+		&:hover {
+			background: #cfcfcf;
+		}
+	}
+
+	em {
+		color: #666;
+		font-style: normal;
+
+		&::before { content: '('; }
+		&::after {  content: ')'; }
+	}
+}
+
+$line0: 30%;
+$line1: 56%;
+$line2: 81%;
+
+$borderpadding: 12%;
+
+$col0: $borderpadding;
+$col1: (100%-($borderpadding*2))/4 * 1 + $borderpadding;
+$col2: (100%-($borderpadding*2))/4 * 2 + $borderpadding;
+$col3: (100%-($borderpadding*2))/4 * 3 + $borderpadding;
+$col4: (100%-($borderpadding*2))/4 * 4 + $borderpadding;
+
+.mission01         { top: $line0; left: $col0; }
+.mission02         { top: $line1; left: $col4; }
+.mission03         { top: $line0; left: $col1; }
+.mission04-color   { top: $line1; left: $col2; }
+.mission04-black   { top: $line1; left: $col3; }
+.mission05         { top: $line0; left: $col3; }
+.mission06         { top: $line0; left: $col4; }
+.mission07         { top: $line2; left: $col2; }
+.mission08         { top: $line2; left: $col3; }
+.mission09         { top: $line2; left: $col1; }
+.mission10         { top: $line2; left: $col0; }
+.mission11         { top: $line1; left: $col1; }
+.mission12         { top: $line2; left: $col4; }
+.mission-penalties { top: $line1; left: $col0; }
+
+.reset {
+	position: absolute;
+	top: $line0;
+	left: $col2;
+	min-width: 10em;
+	margin-left: -5em;
+	margin-top: -4em;
+	padding: 0.5em;
+	background: $color-box-background;
+	box-shadow: 1px 1px 2px $color-box-shadow;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0.5em;
+	background: $color-background;
+	color: #aaa;
+	text-align: center;
+
+	a {
+		color: inherit;
+	}
+}
