@@ -44,6 +44,24 @@ select {
 	width: 100%;
 }
 
+.locales {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	margin: 0;
+	padding: 0;
+	color: #ddd;
+	z-index: 100;
+	list-style: none;
+
+	li {
+		cursor: pointer;
+		display: inline-block;
+		padding: 0.2em;
+		text-transform: uppercase;
+	}
+}
+
 header {
 	position: absolute;
 	top: 1.6%;
@@ -54,6 +72,7 @@ header {
 	line-height: 1.5em;
 
 	h1 {
+		position: relative;
 		display: inline-block;
 		vertical-align: middle;
 		margin: 0;
@@ -75,6 +94,16 @@ header {
 			color: #999;
 			font-size: inherit;
 			font-style: normal;
+		}
+
+		small {
+			position: absolute;
+			top: 50%;
+			left: 18em;
+			right: 0;
+			color: #ddd;
+			font-size: 0.4em;
+			text-align: center;
 		}
 	}
 

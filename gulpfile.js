@@ -19,7 +19,8 @@ gulp.task('scripts', function() {
 	return gulp.src([
 			bower_path + 'react/react-with-addons.js',
 			bower_path + 'fll-robotgame-scorer-2015/src/scorer.js',
-			src_path + 'js/*.js'
+			src_path + 'js/*.js',
+			src_path + 'js/locales/*.js'
 		])
 		.pipe(concat('script.js'))
 		.pipe(uglify())
