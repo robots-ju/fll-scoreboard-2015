@@ -1,8 +1,11 @@
-# Unofficial FLL 2015 Scoreboard
+# Robots-JU FLL 2015 Scoreboard
 
-Web scoreboard for the FLL 2015 (Trash Trek) Robot Game.
+Unofficial web scoreboard for the FLL 2015 (Trash Trek) Robot Game.
 
-This is a private project that is not supported or approved by the organisators of the competition.
+
+
+This is a private project that is not supported or approved by the FIRST LEGO League.
+However it may be the official scoreboard for some events organised by [Robots-JU](https://robots-ju.ch/).
 
 Feel free to report bugs and suggestions in the Issues =)
 
@@ -24,7 +27,7 @@ gulp
 
 ### Technical details
 
-NPM is used the get the dev dependencies for `gulp`.
+NPM is used to get the dev dependencies for `gulp`.
 
 Bower is used for the third party libraries used by the application:
 
