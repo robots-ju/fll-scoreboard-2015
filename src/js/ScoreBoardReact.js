@@ -259,7 +259,7 @@ var ScoreBoardReact = React.createClass({
 						this.lang('m10.building_demolished') + ' ',
 						React.createElement('em', {}, '+85')
 					]),
-					React.createElement('button', {key: 3, onClick: this.demolishBuilding}, 'Demolish building')
+					React.createElement('button', {key: 3, onClick: this.demolishBuilding, title: this.lang('m10.demolish_building_helptext')}, this.lang('m10.demolish_building'))
 				]),
 				React.createElement('div', {key: 'm11', className: 'mission mission11'}, [
 					React.createElement('h2', {key: 1}, 'M11 - ' + this.lang('m11.title')),

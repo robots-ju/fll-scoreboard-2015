@@ -95,7 +95,9 @@ ScoreBoardReact.locales['en'] = {
 
 	m10: {
 		title: 'Demolition',
-		building_demolished: 'Building demolished'
+		building_demolished: 'Building demolished',
+		demolish_building: 'Demolish building',
+		demolish_building_helptext: 'Shortcut for: demolish building, remove 4 black bars from setup position, add 4 black bars anywhere else'
 	},
 
 	m11: {
