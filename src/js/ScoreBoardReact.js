@@ -9,8 +9,34 @@
 
 var ScoreBoardReact = React.createClass({
 	mixins: [React.addons.LinkedStateMixin],
+	getDefaultProps: function() {
+		return {
+			/**
+			 * This a pseudo-event, allowing a script outside the Scoreboard
+			 * to keep an eye on it and read the new values as they change
+			 *
+			 * Default is a no-op
+			 */
+			onStateChange: function() {},
+			/**
+			 * Initial state to load when the Scoreboard is created
+			 * Can be used to restore data from the outside at initialization
+			 */
+			initialState: {}
+		};
+	},
+	componentDidUpdate: function() {
+		// Call the pseudo-event function
+		this.props.onStateChange(this.state);
+	},
 	getInitialState: function() {
 		var state = FllScorer.initialMissionsState;
+
+		// Merge initial state with default state
+		// thanks http://stackoverflow.com/a/171256/3133038
+		for(var attrname in this.props.initialState) {
+			state[attrname] = this.props.initialState[attrname];
+		}
 
 		// Choose the locale according to the browser. Default to English
 		if(window.navigator.language.indexOf('fr') !== -1) {
