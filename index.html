@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Clark Winkelmann">
+	<meta name="description" content="Unofficial Scoreboard for the FLL 2015 Trash Trek Robot Game challenge">
+	<title>FLL 2015 Scoreboard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+	<noscript class="enable_javascript">
+		You have to enable Javascript before using this mind-blowing technology
+		<a href="http://www.enable-javascript.com/" target="_blank">Here's how</a>
+	</noscript>
+	<div id="scoreboard"></div>
+	<footer>
+		Created by Clark Winkelmann.
+		You can find the source code on <a href="https://github.com/robots-ju/fll-scoreboard-2015" target="_blank">GitHub</a>.
+		Images come from the <a href="http://www.firstlegoleague.org/">FIRST® LEGO® League</a> Robot Game materials.
+		Code is <a href="https://github.com/robots-ju/fll-scoreboard-2015/blob/master/LICENSE.txt">MIT-licensed</a>.
+	</footer>
+	<script src="assets/script.js"></script>
+	<script>
+		React.render(React.createElement(ScoreBoardReact), document.getElementById('scoreboard'));
+	</script>
+</body>
+</html>
